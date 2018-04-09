@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMDemo1.ListViewPage">
+
+    <ListView ItemsSource="{Binding PersonsList}"
+              CachingStrategy="RecycleElement"
+              HasUnevenRows="True"
+              SelectedItem="{Binding SelectedPerson}">
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Padding="5">
+                        <Label Text="{Binding Name}" 
+                               FontSize="Medium" 
+                               TextColor="Orange"/>
+                   
+                        <Label Text="{Binding City}" 
+                               FontSize="Small"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+</ContentPage>

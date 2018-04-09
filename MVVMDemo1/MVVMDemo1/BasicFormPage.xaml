@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMDemo1.BasicFormPage"
+             Title="Simple Form Demo(MVVM)"
+             Padding="5">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="0.7*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Simple Form" Grid.ColumnSpan="2" FontSize="Large" TextColor="Teal" HorizontalOptions="CenterAndExpand"/>
+
+            <Label Text="Enter Name : " Grid.Row="1" Grid.Column="0"  VerticalOptions="Center" TextColor="Orange"/>
+            <Entry Text="{Binding Name}" Grid.Row="1" Grid.Column="1" Placeholder="Please enter Name"/>
+
+            <Label Text="Enter City : " Grid.Row="2" Grid.Column="0" VerticalOptions="Center" TextColor="Orange"/>
+            <Entry Text="{Binding City}" Grid.Row="2" Grid.Column="1" Placeholder="Please enter City"/>
+
+            <Label Text="Enter Phone Number : " Grid.Row="3" Grid.Column="0" VerticalOptions="Center" TextColor="Orange"/>
+            <Entry Text="{Binding PhoneNumber}" Grid.Row="3" Grid.Column="1" Placeholder="Please enter Number"/>
+
+            <Button Text="Save" Command="{Binding SaveCommand}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,10"   BackgroundColor="Teal" TextColor="White" HorizontalOptions="Center" VerticalOptions="End"/>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
