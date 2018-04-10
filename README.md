@@ -1,2 +1,2 @@
-# PickerMVVM
-Example for Xamarin forms picker implementation in MVVM and implementing picker SelectedItem in MVVM.
+# XamarinForms_MVVM
+Example of Xamarin forms MVVM implementation for Picker, ListView and implementing a Form in MVVM.
